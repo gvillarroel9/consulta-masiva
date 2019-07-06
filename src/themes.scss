@@ -1,7 +1,8 @@
 @import '~@nebular/theme/styles/theming';
 @import '~@nebular/theme/styles/themes/cosmic';
-
+@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
 $nb-themes: nb-register-theme((
   // add your variables here like:
   // color-bg: #4ca6ff,
+  font-main: "Exo",
 ), cosmic, cosmic);

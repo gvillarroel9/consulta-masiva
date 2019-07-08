@@ -1,3 +1,43 @@
-<p>
-  enel works!
-</p>
+<nb-card>
+    <nb-card-header > <img style="width: 10em; float: left;" src="../../../assets/enel-logo.png" alt=""><h2 class="mt-4"></h2></nb-card-header>
+        <nb-card-body>
+            <div class="row mt-4">
+                    <div class="input-group mb-3 col-6">
+                        <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile03" (change)="onFileChange($event)" aria-describedby="inputGroupFileAddon03">
+                        <label class="custom-file-label" for="inputGroupFile03">{{fileName}}</label>
+                        </div>
+                    </div>        
+                    <div class="col-3"><button class="btn btn-success" (click)="consultaMasiva()">Consultar Todos</button></div>
+                    <div class="col-3"><button class="btn btn-primary" (click)="export()">Exportar Excel</button></div>
+                </div>
+                <nb-progress-bar *ngIf="!complete" class="my-4" [value]="(progress*100)/(total)" status="info">{{((progress*100)/(total)).toFixed()}}%</nb-progress-bar>   
+                <nb-list *ngIf="complete">
+                    <nb-list-item *ngFor="let row of data">
+                            <div class="row">
+                                    <div class="col">
+                                       {{ row[3] }}
+                                    </div>
+                                    <div class="col">
+                                        {{ row[4] }}
+                                    </div>
+                                    <div class="col">
+                                        {{ row[5] }}
+                                    </div>
+                            </div>
+                    </nb-list-item>              
+                </nb-list>    
+                <div class="mx-auto mt-5 center" *ngIf="!complete">
+                        <div class="spinner-grow text-success" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-warning" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                </div>       
+        </nb-card-body>
+</nb-card>
+        

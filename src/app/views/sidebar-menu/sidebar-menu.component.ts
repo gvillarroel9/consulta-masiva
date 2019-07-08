@@ -17,12 +17,12 @@ export class SidebarMenuComponent implements OnInit {
     {
       title: 'Enel',
       link: '/enel',
-      icon: 'fas fa-box-open',
+      icon: 'far fa-lightbulb',
     },
     {
       title: 'Aguas Andinas',
       link: '/aguas-andinas',
-      icon: 'fas fa-tag',
+      icon: 'fas fa-tint',
     },
   ];
 

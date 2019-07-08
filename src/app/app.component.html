@@ -1,17 +1,12 @@
 <nb-layout>
 
   <nb-layout-header fixed>
-    <a href="#" (click)="toggle()"><i class="nb-menu"></i></a>
+    <a href="#" (click)="toggle()"><i class="nb-menu"></i></a>    
   </nb-layout-header>
 
   <nb-sidebar><app-sidebar-menu></app-sidebar-menu></nb-sidebar>  
   <nb-layout-column>
-    <h1>BIENVENIDOS</h1>
     <router-outlet></router-outlet>    
   </nb-layout-column>
-
-  <nb-layout-footer fixed>
-  <!-- Insert footer here -->
-  </nb-layout-footer>
 
 </nb-layout>
